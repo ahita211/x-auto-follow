@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    width: 400px;
+    min-height: 600px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #1da1f2, #0d8bd9);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.status {
+    font-size: 14px;
+    opacity: 0.9;
+    padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.tabs {
+    display: flex;
+    background: #f1f3f4;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    transition: all 0.2s;
+}
+
+.tab-btn.active {
+    background: white;
+    color: #1da1f2;
+    border-bottom: 2px solid #1da1f2;
+}
+
+.tab-btn:hover {
+    background: rgba(29, 161, 242, 0.1);
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.settings {
+    margin-bottom: 20px;
+}
+
+.setting-group {
+    margin-bottom: 16px;
+}
+
+.setting-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.setting-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+.setting-group input:focus {
+    outline: none;
+    border-color: #1da1f2;
+}
+
+.action-btn {
+    width: 100%;
+    padding: 12px;
+    background: #1da1f2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.action-btn:hover {
+    background: #0d8bd9;
+}
+
+.action-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.controls {
+    padding: 20px;
+    border-top: 1px solid #e1e5e9;
+    display: flex;
+    gap: 10px;
+}
+
+.stop-btn, .reset-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.stop-btn {
+    background: #dc3545;
+    color: white;
+}
+
+.stop-btn:hover {
+    background: #c82333;
+}
+
+.reset-btn {
+    background: #6c757d;
+    color: white;
+}
+
+.reset-btn:hover {
+    background: #5a6268;
+}
+
+.log {
+    padding: 20px;
+    border-top: 1px solid #e1e5e9;
+    background: #f8f9fa;
+}
+
+.log h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #555;
+}
+
+#log-content {
+    max-height: 150px;
+    overflow-y: auto;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #666;
+}
+
+.log-entry {
+    padding: 4px 0;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.log-entry:last-child {
+    border-bottom: none;
+}
+
+.log-success {
+    color: #28a745;
+}
+
+.log-error {
+    color: #dc3545;
+}
+
+.log-info {
+    color: #17a2b8;
+}
+
+/* スクロールバーのスタイル */
+#log-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+#log-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+#log-content::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+#log-content::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+} 

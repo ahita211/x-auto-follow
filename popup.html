@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X Auto Follow Tool</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>X Auto Follow Tool</h1>
+            <div class="status" id="status">待機中</div>
+        </header>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="follow">フォロー</button>
+            <button class="tab-btn" data-tab="unfollow">アンフォロー</button>
+            <button class="tab-btn" data-tab="like">いいね</button>
+        </div>
+
+        <div class="tab-content active" id="follow-tab">
+            <div class="settings">
+                <div class="setting-group">
+                    <label for="follow-max">最大フォロー数:</label>
+                    <input type="number" id="follow-max" value="50" min="1" max="1000">
+                </div>
+                <div class="setting-group">
+                    <label for="follow-min">最小フォロー数:</label>
+                    <input type="number" id="follow-min" value="10" min="1" max="1000">
+                </div>
+                <div class="setting-group">
+                    <label for="follow-interval">フォロー間隔 (秒):</label>
+                    <input type="number" id="follow-interval" value="3" min="1" max="60">
+                </div>
+            </div>
+            <button class="action-btn" id="start-follow">フォロー開始</button>
+        </div>
+
+        <div class="tab-content" id="unfollow-tab">
+            <div class="settings">
+                <div class="setting-group">
+                    <label for="unfollow-max">最大アンフォロー数:</label>
+                    <input type="number" id="unfollow-max" value="30" min="1" max="1000">
+                </div>
+                <div class="setting-group">
+                    <label for="unfollow-min">最小アンフォロー数:</label>
+                    <input type="number" id="unfollow-min" value="5" min="1" max="1000">
+                </div>
+                <div class="setting-group">
+                    <label for="unfollow-interval">アンフォロー間隔 (秒):</label>
+                    <input type="number" id="unfollow-interval" value="5" min="1" max="60">
+                </div>
+            </div>
+            <button class="action-btn" id="start-unfollow">アンフォロー開始</button>
+        </div>
+
+        <div class="tab-content" id="like-tab">
+            <div class="settings">
+                <div class="setting-group">
+                    <label for="like-max">最大いいね数:</label>
+                    <input type="number" id="like-max" value="100" min="1" max="1000">
+                </div>
+                <div class="setting-group">
+                    <label for="like-min">最小いいね数:</label>
+                    <input type="number" id="like-min" value="20" min="1" max="1000">
+                </div>
+                <div class="setting-group">
+                    <label for="like-interval">いいね間隔 (秒):</label>
+                    <input type="number" id="like-interval" value="2" min="1" max="60">
+                </div>
+            </div>
+            <button class="action-btn" id="start-like">いいね開始</button>
+        </div>
+
+        <div class="controls">
+            <button class="stop-btn" id="stop-action">停止</button>
+            <button class="reset-btn" id="reset-settings">設定リセット</button>
+        </div>
+
+        <div class="log">
+            <h3>ログ</h3>
+            <div id="log-content"></div>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html> 

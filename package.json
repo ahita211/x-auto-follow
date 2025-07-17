@@ -1,0 +1,33 @@
+{
+  "name": "x-auto-follow-tool",
+  "version": "1.0.0",
+  "description": "X（旧Twitter）の自動フォロー、アンフォロー、いいねツール - Chrome拡張機能",
+  "main": "manifest.json",
+  "scripts": {
+    "build": "echo 'Chrome拡張機能のビルドは不要です。ファイルをそのまま使用してください。'",
+    "test": "echo 'テストは手動で行ってください。'"
+  },
+  "keywords": [
+    "chrome-extension",
+    "twitter",
+    "x",
+    "auto-follow",
+    "automation",
+    "manifest-v3"
+  ],
+  "author": "X Auto Follow Tool Developer",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/x-auto-follow-tool.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/x-auto-follow-tool/issues"
+  },
+  "homepage": "https://github.com/your-username/x-auto-follow-tool#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+} 
